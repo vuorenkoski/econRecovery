@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>EconRecovery</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="#">EconRecovery</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="{% url 'index_view' %}">Country data</a></li>
+                    <li><a href="{% url 'world_view' %}">World data</a></li>
+                    <li><a href="{% url 'predictions_view' %}">Predictions</a></li>
+                    <li class="active"><a href="{% url 'about_view' %}">About</a></li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+    
+        <div class="container-fluid">    
+            <div class="row content">
+                <div class="col-sm-3 sidenav">
+   
+                </div>
+                <div class="col-sm-8 text-left"> 
+                    <p>Mini-project for Introduction to Data Science 2021</p>
+                    <p>Seungwon Jang, Mikita Kulbitski, Lauri Vuorenkoski</p>
+                </div>
+                <div class="col-sm-2 text-left"> 
+
+                </div>
+            </div>
+        </div>
+
+    <footer class="container-fluid text-center">
+    <p>Economic recovery from COVID-pandemic, 2021</p>
+    </footer>
+
+    </body>
+</html>

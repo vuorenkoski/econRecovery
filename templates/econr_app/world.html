@@ -1,0 +1,101 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>EconRecovery</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="#">EconRecovery</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="{% url 'index_view' %}">Country data</a></li>
+                    <li class="active"><a href="{% url 'world_view' %}">World data</a></li>
+                    <li><a href="{% url 'predictions_view' %}">Predictions</a></li>
+                    <li><a href="{% url 'about_view' %}">About</a></li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+    
+        <div class="container-fluid">    
+            <div class="row content">
+                <div class="col-sm-3 sidenav">
+                    <h3>Choose indicator and year</h3>
+                    <form action="/world" method="POST">
+                        {% csrf_token %} 
+                        <select id="indicator" name="indicator">
+                        {% for i in indicators %}
+                            <option value="{{ i }}">{{ i }}</option>
+                        {% endfor %}
+                        </select>
+                        <select id="year" name="year">
+                            {% for y in years %}
+                                <option value="{{ y }}">{{ y }}</option>
+                            {% endfor %}
+                        </select>
+                        <input type="submit" value="Choose">
+                    </form>
+                </div>
+                <div class="col-sm-8 text-left"> 
+                    <div class="row">
+                        {% if indicator is not None %}
+                            <h1>Area data for {{indicator}} in {{year}}</h1>
+                        {% endif %}
+                        <hr>
+                    </div>
+
+                    <div class="row">
+                        {% if datatable is not None %}
+                            <div id="regions_div" style="width: 900px; height: 500px;"></div>
+                        {% endif %}
+                        <hr>
+                    </div>
+                </div>
+                <div class="col-sm-2 text-left"> 
+                </div>
+            </div>
+        </div>
+
+    <footer class="container-fluid text-center">
+    <p>Economic recovery from COVID-pandemic, 2021</p>
+    </footer>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart'],
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable({{datatable|safe}});
+
+        var options = {projection: "kavrayskiy-vii"};
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    </body>
+</html>

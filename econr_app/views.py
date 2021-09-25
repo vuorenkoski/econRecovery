@@ -5,8 +5,23 @@ import json
 from django.shortcuts import render
 from django.contrib.staticfiles.storage import staticfiles_storage
 
-def index_view(request):
+def get_countries():
+    return np.sort(pd.read_csv(staticfiles_storage.path('countries.csv')).iloc[:,0].to_numpy())
+
+def get_data():
     df = pd.read_csv(staticfiles_storage.path('stat.csv')).rename(columns={'Country or Area':'Area'})
+    df.Value = pd.to_numeric(df.Value, errors='coerce')
+    return df
+
+def to_maptable(df, indicator):
+    datatable = "[['Country', '" + indicator + "']"
+    for i,r in df.dropna().iterrows():
+        datatable+=",['" + r['Area'] + "'," + str(r['Value']) + "]"
+    datatable+=']'
+    return datatable
+
+def index_view(request):
+    df = get_data()
     if request.method == "POST":
         area = request.POST['area']
         areadata = df[df.Area == request.POST['area']]
@@ -20,6 +35,28 @@ def index_view(request):
         area = None
 
     datapoints = df.shape[0]
-    countries = df.Area.unique()
-    data={'datapoints':datapoints, 'countries_nr':len(countries), 'countries':np.sort(countries), 'datatable':datatable, 'gdp':gdp, 'area':area}
-    return render(request, 'econr_app/index.html', data) 
+    countries = get_countries()
+    data={'datapoints':datapoints, 'countries_nr':len(df.Area.unique()), 'countries':countries, 'datatable':datatable, 'gdp':gdp, 'area':area}
+    return render(request, 'econr_app/countries.html', data) 
+
+def world_view(request):
+    df = get_data()
+    if request.method == "POST":
+        indicator = request.POST['indicator']
+        year = request.POST['year']
+        indicator_data = df[(df.Item == indicator) & (df.Year == int(year)) & (df.Area.isin(get_countries()))]
+        datatable = to_maptable(indicator_data, indicator)
+    else:
+        indicator = None
+        datatable = None
+        year = None
+    indicators=df.Item.unique()
+    years = df.Year.unique()
+    data={'indicators':indicators, 'indicator':indicator, 'datatable':datatable, 'year':year, 'years':years}
+    return render(request, 'econr_app/world.html', data)
+
+def predictions_view(request):
+    return render(request, 'econr_app/predictions.html')
+
+def about_view(request):
+    return render(request, 'econr_app/about.html')
