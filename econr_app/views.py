@@ -21,6 +21,9 @@ def to_maptable(df, indicator):
     return datatable
 
 def index_view(request):
+    return render(request, 'econr_app/index.html') 
+
+def countries_view(request):
     df = get_data()
     if request.method == "POST":
         area = request.POST['area']
