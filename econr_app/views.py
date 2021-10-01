@@ -16,7 +16,7 @@ def get_data():
 def to_maptable(df, indicator):
     datatable = "[['Country', '" + indicator + "']"
     for i,r in df.dropna().iterrows():
-        datatable+=",['" + r['Area'] + "'," + str(r['Value']) + "]"
+        datatable+=",['" + r['Code2'] + "'," + str(r['Value']) + "]"
     datatable+=']'
     return datatable
 
