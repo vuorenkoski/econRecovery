@@ -1,0 +1,42 @@
+POSSIBLE INDICATORS
+- vaccination rate
+- realince on tourism
+- financial stimulus pakcets
+- death rate
+- pre pandemic GDP growth rate
+- unemployment rate
+- bankruptcy rate dirng pandemic
+- other concurrent economic stabilities
+- prepandemic debt rate
+- current debt rate
+
+Possible datasources:
+https://ourworldindata.org/
+https://www.imf.org/external/datamapper
+https://databank.worldbank.org/source/world-development-indicators
+https://data.oecd.org/
+
+OECD: 
+https://data.oecd.org/gdp/quarterly-gdp.htm#indicator-chart (quarterly GDP)
+
+WORLD BANK:
+GDP: https://data.worldbank.org/indicator/NY.GDP.PCAP.CD
+International tourism, number of arrivals: 'ST.INT.ARVL'
+Unemployment, total (% of total labor force) (modeled ILO estimate): 'SL.UEM.TOTL.ZS'
+
+IMF
+Real GDP growth: 
+https://www.imf.org/external/datamapper/NGDP_RPCH@WEO/OEMDC/ADVEC/WEOWORLD
+
+Public sector debt
+https://www.imf.org/external/datamapper/CG_DEBT_GDP@GDD/OEMDC/ADVEC/WEOWORLD
+https://www.imf.org/external/datamapper/GGXWDG_NGDP@WEO/OEMDC/ADVEC/WEOWORLD
+
+Unemployment rate
+https://www.imf.org/external/datamapper/LUR@WEO/OEMDC/ADVEC/WEOWORLD
+
+OUR WORLD IN DATA: Covid cases, deaths and vaccination
+https://covid.ourworldindata.org/data/owid-covid-data.csv
+
+
+

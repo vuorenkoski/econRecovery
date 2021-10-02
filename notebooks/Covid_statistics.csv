@@ -1,0 +1,227 @@
+Value,Country or Area,Code,Item,Year
+1.94,Afghanistan,AFG,people_vaccinated_per_hundred,2021
+6.77,Africa,OWID_AFR,people_vaccinated_per_hundred,2021
+32.86,Albania,ALB,people_vaccinated_per_hundred,2021
+13.49,Algeria,DZA,people_vaccinated_per_hundred,2021
+68.4,Andorra,AND,people_vaccinated_per_hundred,2021
+6.27,Angola,AGO,people_vaccinated_per_hundred,2021
+62.8,Anguilla,AIA,people_vaccinated_per_hundred,2021
+51.81,Antigua and Barbuda,ATG,people_vaccinated_per_hundred,2021
+65.07,Argentina,ARG,people_vaccinated_per_hundred,2021
+8.92,Armenia,ARM,people_vaccinated_per_hundred,2021
+75.91,Aruba,ABW,people_vaccinated_per_hundred,2021
+51.72,Asia,OWID_ASI,people_vaccinated_per_hundred,2021
+64.17,Australia,AUS,people_vaccinated_per_hundred,2021
+63.43,Austria,AUT,people_vaccinated_per_hundred,2021
+46.58,Azerbaijan,AZE,people_vaccinated_per_hundred,2021
+28.81,Bahamas,BHS,people_vaccinated_per_hundred,2021
+66.65,Bahrain,BHR,people_vaccinated_per_hundred,2021
+18.94,Bangladesh,BGD,people_vaccinated_per_hundred,2021
+46.38,Barbados,BRB,people_vaccinated_per_hundred,2021
+19.88,Belarus,BLR,people_vaccinated_per_hundred,2021
+73.82,Belgium,BEL,people_vaccinated_per_hundred,2021
+47.5,Belize,BLZ,people_vaccinated_per_hundred,2021
+1.82,Benin,BEN,people_vaccinated_per_hundred,2021
+70.63,Bermuda,BMU,people_vaccinated_per_hundred,2021
+74.96,Bhutan,BTN,people_vaccinated_per_hundred,2021
+35.94,Bolivia,BOL,people_vaccinated_per_hundred,2021
+72.26,Bonaire Sint Eustatius and Saba,BES,people_vaccinated_per_hundred,2021
+19.43,Bosnia and Herzegovina,BIH,people_vaccinated_per_hundred,2021
+16.47,Botswana,BWA,people_vaccinated_per_hundred,2021
+70.22,Brazil,BRA,people_vaccinated_per_hundred,2021
+57.32,British Virgin Islands,VGB,people_vaccinated_per_hundred,2021
+64.77,Brunei,BRN,people_vaccinated_per_hundred,2021
+15.79,Bulgaria,BGR,people_vaccinated_per_hundred,2021
+1.09,Burkina Faso,BFA,people_vaccinated_per_hundred,2021
+78.32,Cambodia,KHM,people_vaccinated_per_hundred,2021
+1.39,Cameroon,CMR,people_vaccinated_per_hundred,2021
+76.81,Canada,CAN,people_vaccinated_per_hundred,2021
+50.56,Cape Verde,CPV,people_vaccinated_per_hundred,2021
+82.9,Cayman Islands,CYM,people_vaccinated_per_hundred,2021
+4.01,Central African Republic,CAF,people_vaccinated_per_hundred,2021
+0.67,Chad,TCD,people_vaccinated_per_hundred,2021
+79.6,Chile,CHL,people_vaccinated_per_hundred,2021
+76.22,China,CHN,people_vaccinated_per_hundred,2021
+51.1,Colombia,COL,people_vaccinated_per_hundred,2021
+19.67,Comoros,COM,people_vaccinated_per_hundred,2021
+4.08,Congo,COG,people_vaccinated_per_hundred,2021
+64.97,Cook Islands,COK,people_vaccinated_per_hundred,2021
+63.72,Costa Rica,CRI,people_vaccinated_per_hundred,2021
+4.41,Cote d'Ivoire,CIV,people_vaccinated_per_hundred,2021
+44.53,Croatia,HRV,people_vaccinated_per_hundred,2021
+81.85,Cuba,CUB,people_vaccinated_per_hundred,2021
+59.4,Curacao,CUW,people_vaccinated_per_hundred,2021
+67.0,Cyprus,CYP,people_vaccinated_per_hundred,2021
+56.72,Czechia,CZE,people_vaccinated_per_hundred,2021
+0.1,Democratic Republic of Congo,COD,people_vaccinated_per_hundred,2021
+76.63,Denmark,DNK,people_vaccinated_per_hundred,2021
+6.59,Djibouti,DJI,people_vaccinated_per_hundred,2021
+32.72,Dominica,DMA,people_vaccinated_per_hundred,2021
+55.33,Dominican Republic,DOM,people_vaccinated_per_hundred,2021
+63.19,Ecuador,ECU,people_vaccinated_per_hundred,2021
+10.09,Egypt,EGY,people_vaccinated_per_hundred,2021
+63.01,El Salvador,SLV,people_vaccinated_per_hundred,2021
+15.12,Equatorial Guinea,GNQ,people_vaccinated_per_hundred,2021
+57.27,Estonia,EST,people_vaccinated_per_hundred,2021
+17.82,Eswatini,SWZ,people_vaccinated_per_hundred,2021
+2.4,Ethiopia,ETH,people_vaccinated_per_hundred,2021
+56.67,Europe,OWID_EUR,people_vaccinated_per_hundred,2021
+67.2,European Union,OWID_EUN,people_vaccinated_per_hundred,2021
+77.69,Faeroe Islands,FRO,people_vaccinated_per_hundred,2021
+74.6,Falkland Islands,FLK,people_vaccinated_per_hundred,2021
+65.49,Fiji,FJI,people_vaccinated_per_hundred,2021
+74.5,Finland,FIN,people_vaccinated_per_hundred,2021
+74.43,France,FRA,people_vaccinated_per_hundred,2021
+53.85,French Polynesia,PYF,people_vaccinated_per_hundred,2021
+4.49,Gabon,GAB,people_vaccinated_per_hundred,2021
+7.39,Gambia,GMB,people_vaccinated_per_hundred,2021
+24.59,Georgia,GEO,people_vaccinated_per_hundred,2021
+67.49,Germany,DEU,people_vaccinated_per_hundred,2021
+2.73,Ghana,GHA,people_vaccinated_per_hundred,2021
+118.54,Gibraltar,GIB,people_vaccinated_per_hundred,2021
+62.15,Greece,GRC,people_vaccinated_per_hundred,2021
+72.59,Greenland,GRL,people_vaccinated_per_hundred,2021
+29.32,Grenada,GRD,people_vaccinated_per_hundred,2021
+24.6,Guatemala,GTM,people_vaccinated_per_hundred,2021
+49.17,Guernsey,GGY,people_vaccinated_per_hundred,2021
+8.78,Guinea,GIN,people_vaccinated_per_hundred,2021
+4.33,Guinea-Bissau,GNB,people_vaccinated_per_hundred,2021
+45.2,Guyana,GUY,people_vaccinated_per_hundred,2021
+0.37,Haiti,HTI,people_vaccinated_per_hundred,2021
+31.87,Honduras,HND,people_vaccinated_per_hundred,2021
+59.48,Hong Kong,HKG,people_vaccinated_per_hundred,2021
+61.15,Hungary,HUN,people_vaccinated_per_hundred,2021
+82.05,Iceland,ISL,people_vaccinated_per_hundred,2021
+46.57,India,IND,people_vaccinated_per_hundred,2021
+32.96,Indonesia,IDN,people_vaccinated_per_hundred,2021
+42.7,Iran,IRN,people_vaccinated_per_hundred,2021
+11.36,Iraq,IRQ,people_vaccinated_per_hundred,2021
+75.67,Ireland,IRL,people_vaccinated_per_hundred,2021
+76.64,Isle of Man,IMN,people_vaccinated_per_hundred,2021
+69.63,Israel,ISR,people_vaccinated_per_hundred,2021
+74.89,Italy,ITA,people_vaccinated_per_hundred,2021
+17.79,Jamaica,JAM,people_vaccinated_per_hundred,2021
+70.73,Japan,JPN,people_vaccinated_per_hundred,2021
+76.35,Jersey,JEY,people_vaccinated_per_hundred,2021
+36.16,Jordan,JOR,people_vaccinated_per_hundred,2021
+40.13,Kazakhstan,KAZ,people_vaccinated_per_hundred,2021
+5.12,Kenya,KEN,people_vaccinated_per_hundred,2021
+24.24,Kiribati,KIR,people_vaccinated_per_hundred,2021
+41.02,Kosovo,OWID_KOS,people_vaccinated_per_hundred,2021
+61.64,Kuwait,KWT,people_vaccinated_per_hundred,2021
+12.55,Kyrgyzstan,KGZ,people_vaccinated_per_hundred,2021
+37.94,Laos,LAO,people_vaccinated_per_hundred,2021
+49.46,Latvia,LVA,people_vaccinated_per_hundred,2021
+23.78,Lebanon,LBN,people_vaccinated_per_hundred,2021
+11.54,Lesotho,LSO,people_vaccinated_per_hundred,2021
+2.02,Liberia,LBR,people_vaccinated_per_hundred,2021
+19.86,Libya,LBY,people_vaccinated_per_hundred,2021
+64.09,Liechtenstein,LIE,people_vaccinated_per_hundred,2021
+64.99,Lithuania,LTU,people_vaccinated_per_hundred,2021
+65.84,Luxembourg,LUX,people_vaccinated_per_hundred,2021
+55.25,Macao,MAC,people_vaccinated_per_hundred,2021
+0.69,Madagascar,MDG,people_vaccinated_per_hundred,2021
+4.1,Malawi,MWI,people_vaccinated_per_hundred,2021
+71.83,Malaysia,MYS,people_vaccinated_per_hundred,2021
+72.1,Maldives,MDV,people_vaccinated_per_hundred,2021
+1.52,Mali,MLI,people_vaccinated_per_hundred,2021
+81.72,Malta,MLT,people_vaccinated_per_hundred,2021
+6.52,Mauritania,MRT,people_vaccinated_per_hundred,2021
+67.21,Mauritius,MUS,people_vaccinated_per_hundred,2021
+49.07,Mexico,MEX,people_vaccinated_per_hundred,2021
+13.94,Moldova,MDA,people_vaccinated_per_hundred,2021
+67.49,Monaco,MCO,people_vaccinated_per_hundred,2021
+67.62,Mongolia,MNG,people_vaccinated_per_hundred,2021
+38.73,Montenegro,MNE,people_vaccinated_per_hundred,2021
+29.77,Montserrat,MSR,people_vaccinated_per_hundred,2021
+59.74,Morocco,MAR,people_vaccinated_per_hundred,2021
+5.92,Mozambique,MOZ,people_vaccinated_per_hundred,2021
+13.15,Myanmar,MMR,people_vaccinated_per_hundred,2021
+10.1,Namibia,NAM,people_vaccinated_per_hundred,2021
+70.01,Nauru,NRU,people_vaccinated_per_hundred,2021
+25.13,Nepal,NPL,people_vaccinated_per_hundred,2021
+74.6,Netherlands,NLD,people_vaccinated_per_hundred,2021
+48.95,New Caledonia,NCL,people_vaccinated_per_hundred,2021
+67.8,New Zealand,NZL,people_vaccinated_per_hundred,2021
+7.49,Nicaragua,NIC,people_vaccinated_per_hundred,2021
+1.62,Niger,NER,people_vaccinated_per_hundred,2021
+2.27,Nigeria,NGA,people_vaccinated_per_hundred,2021
+74.47,Niue,NIU,people_vaccinated_per_hundred,2021
+57.58,North America,OWID_NAM,people_vaccinated_per_hundred,2021
+37.73,North Macedonia,MKD,people_vaccinated_per_hundred,2021
+41.95,Northern Cyprus,OWID_CYN,people_vaccinated_per_hundred,2021
+76.0,Norway,NOR,people_vaccinated_per_hundred,2021
+49.02,Oceania,OWID_OCE,people_vaccinated_per_hundred,2021
+55.45,Oman,OMN,people_vaccinated_per_hundred,2021
+26.45,Pakistan,PAK,people_vaccinated_per_hundred,2021
+26.86,Palestine,PSE,people_vaccinated_per_hundred,2021
+66.73,Panama,PAN,people_vaccinated_per_hundred,2021
+1.32,Papua New Guinea,PNG,people_vaccinated_per_hundred,2021
+36.32,Paraguay,PRY,people_vaccinated_per_hundred,2021
+46.64,Peru,PER,people_vaccinated_per_hundred,2021
+22.69,Philippines,PHL,people_vaccinated_per_hundred,2021
+100.0,Pitcairn,PCN,people_vaccinated_per_hundred,2021
+52.42,Poland,POL,people_vaccinated_per_hundred,2021
+87.83,Portugal,PRT,people_vaccinated_per_hundred,2021
+80.54,Qatar,QAT,people_vaccinated_per_hundred,2021
+29.16,Romania,ROU,people_vaccinated_per_hundred,2021
+32.95,Russia,RUS,people_vaccinated_per_hundred,2021
+15.94,Rwanda,RWA,people_vaccinated_per_hundred,2021
+71.55,Saint Helena,SHN,people_vaccinated_per_hundred,2021
+47.42,Saint Kitts and Nevis,KNA,people_vaccinated_per_hundred,2021
+24.93,Saint Lucia,LCA,people_vaccinated_per_hundred,2021
+18.53,Saint Vincent and the Grenadines,VCT,people_vaccinated_per_hundred,2021
+57.31,Samoa,WSM,people_vaccinated_per_hundred,2021
+71.85,San Marino,SMR,people_vaccinated_per_hundred,2021
+27.11,Sao Tome and Principe,STP,people_vaccinated_per_hundred,2021
+66.18,Saudi Arabia,SAU,people_vaccinated_per_hundred,2021
+7.26,Senegal,SEN,people_vaccinated_per_hundred,2021
+44.63,Serbia,SRB,people_vaccinated_per_hundred,2021
+78.16,Seychelles,SYC,people_vaccinated_per_hundred,2021
+2.33,Sierra Leone,SLE,people_vaccinated_per_hundred,2021
+79.58,Singapore,SGP,people_vaccinated_per_hundred,2021
+59.24,Sint Maarten (Dutch part),SXM,people_vaccinated_per_hundred,2021
+44.83,Slovakia,SVK,people_vaccinated_per_hundred,2021
+54.21,Slovenia,SVN,people_vaccinated_per_hundred,2021
+10.59,Solomon Islands,SLB,people_vaccinated_per_hundred,2021
+1.54,Somalia,SOM,people_vaccinated_per_hundred,2021
+20.97,South Africa,ZAF,people_vaccinated_per_hundred,2021
+61.77,South America,OWID_SAM,people_vaccinated_per_hundred,2021
+76.69,South Korea,KOR,people_vaccinated_per_hundred,2021
+0.65,South Sudan,SSD,people_vaccinated_per_hundred,2021
+80.61,Spain,ESP,people_vaccinated_per_hundred,2021
+67.46,Sri Lanka,LKA,people_vaccinated_per_hundred,2021
+1.45,Sudan,SDN,people_vaccinated_per_hundred,2021
+38.7,Suriname,SUR,people_vaccinated_per_hundred,2021
+70.4,Sweden,SWE,people_vaccinated_per_hundred,2021
+63.32,Switzerland,CHE,people_vaccinated_per_hundred,2021
+1.56,Syria,SYR,people_vaccinated_per_hundred,2021
+55.52,Taiwan,TWN,people_vaccinated_per_hundred,2021
+23.66,Tajikistan,TJK,people_vaccinated_per_hundred,2021
+0.57,Tanzania,TZA,people_vaccinated_per_hundred,2021
+42.17,Thailand,THA,people_vaccinated_per_hundred,2021
+32.85,Timor,TLS,people_vaccinated_per_hundred,2021
+7.02,Togo,TGO,people_vaccinated_per_hundred,2021
+70.76,Tokelau,TKL,people_vaccinated_per_hundred,2021
+43.21,Tonga,TON,people_vaccinated_per_hundred,2021
+40.99,Trinidad and Tobago,TTO,people_vaccinated_per_hundred,2021
+42.17,Tunisia,TUN,people_vaccinated_per_hundred,2021
+63.31,Turkey,TUR,people_vaccinated_per_hundred,2021
+0.53,Turkmenistan,TKM,people_vaccinated_per_hundred,2021
+69.97,Turks and Caicos Islands,TCA,people_vaccinated_per_hundred,2021
+52.07,Tuvalu,TUV,people_vaccinated_per_hundred,2021
+3.49,Uganda,UGA,people_vaccinated_per_hundred,2021
+16.27,Ukraine,UKR,people_vaccinated_per_hundred,2021
+93.05,United Arab Emirates,ARE,people_vaccinated_per_hundred,2021
+71.59,United Kingdom,GBR,people_vaccinated_per_hundred,2021
+63.73,United States,USA,people_vaccinated_per_hundred,2021
+78.47,Uruguay,URY,people_vaccinated_per_hundred,2021
+28.84,Uzbekistan,UZB,people_vaccinated_per_hundred,2021
+13.62,Vanuatu,VUT,people_vaccinated_per_hundred,2021
+33.9,Venezuela,VEN,people_vaccinated_per_hundred,2021
+32.77,Vietnam,VNM,people_vaccinated_per_hundred,2021
+48.37,Wallis and Futuna,WLF,people_vaccinated_per_hundred,2021
+45.33,World,OWID_WRL,people_vaccinated_per_hundred,2021
+1.01,Yemen,YEM,people_vaccinated_per_hundred,2021
+1.64,Zambia,ZMB,people_vaccinated_per_hundred,2021
+20.43,Zimbabwe,ZWE,people_vaccinated_per_hundred,2021
