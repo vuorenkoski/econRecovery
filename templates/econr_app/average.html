@@ -28,8 +28,8 @@
                 <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li><a href="{% url 'countries_view' %}">Country data</a></li>
-                    <li><a href="{% url 'average_view' %}">Average</a></li>
-                    <li class="active"><a href="{% url 'world_view' %}">World data</a></li>
+                    <li class="active"><a href="{% url 'average_view' %}">Average</a></li>
+                    <li><a href="{% url 'world_view' %}">World data</a></li>
                     <li><a href="{% url 'predictions_view' %}">Predictions</a></li>
                     <li><a href="{% url 'about_view' %}">About</a></li>
                 </ul>
@@ -37,53 +37,44 @@
             </div>
         </nav>
     
-        <div class="container-fluid">
+        <div class="container-fluid">    
             <div class="row content">
                 <div class="col-sm-3 sidenav">
-                    <h3>Choose indicator and year</h3>
-                    <form action="/world" method="POST">
+                    <h3>Choose country or area</h3>
+                    <form action="/average" method="POST">
                         {% csrf_token %} 
-                        <select id="indicator" name="indicator">
-                        {% for i in indicators %}
-                            {% if i == indicator %}
-                                <option value="{{ i }}" selected="selected">{{ i }}</option>
+                        <select id="area" name="area">
+                        {% for c in countries %}
+                            {% if c == area %}
+                                <option value="{{ c }}" selected="selected">{{ c }}</option>
                             {% else %}
-                                <option value="{{ i }}">{{ i }}</option>
+                                <option value="{{ c }}">{{ c }}</option>
                             {% endif %}
                         {% endfor %}
                         </select><br>
-                        <select id="year" name="year">
-                            {% for y in years %}
-                                {% if y == year %}
-                                    <option value="{{ y }}" selected="selected">{{ y }}</option>
-                                {% else %}
-                                    <option value="{{ y }}">{{ y }}</option>
-                                {% endif %}
-                            {% endfor %}
-                        </select><br>
                         <input type="submit" value="Choose">
                     </form>
-
-
                 </div>
                 <div class="col-sm-1 text-left"> 
                 </div>
-                <div class="col-sm-6 text-left"> 
+                <div class="col-sm-5 text-left"> 
+
                     <div class="row">
-                        {% if indicator is not None %}
-                            <h1>Area data for {{indicator}} in {{year}}</h1>
+                        {% if area is not None %}
+                            <h1>Compare {{area}} to world average</h1>
                             <hr>
                         {% endif %}
                     </div>
 
                     <div class="row">
-                        {% if datatable is not None %}
-                            <div id="regions_div" style="width: 900px; height: 500px;"></div>
+                        {% if gdp is not None %}
+                            <canvas id="chart"></canvas>
                             <hr>
                         {% endif %}
                     </div>
+
                 </div>
-                <div class="col-sm-2 text-left"> 
+                <div class="col-sm-1 text-left"> 
                 </div>
             </div>
         </div>
@@ -92,23 +83,23 @@
     <p>Economic recovery from COVID-pandemic, 2021</p>
     </footer>
 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {
-        'packages':['geochart'],
-      });
-      google.charts.setOnLoadCallback(drawRegionsMap);
-
-      function drawRegionsMap() {
-        var data = google.visualization.arrayToDataTable({{datatable|safe}});
-
-        var options = {projection: "kavrayskiy-vii"};
-
-        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
-
-        chart.draw(data, options);
-      }
-    </script>
-
+    <script>
+        var ctx = document.getElementById('chart').getContext('2d');
+        var options = {
+            animation: true,
+            animationEasing: 'easeInOutQuart',
+            animationSteps: 80,
+            plugins: {
+                legend: {
+                    display: false,
+                }
+            }
+        };
+        var myChart = new Chart(ctx, {
+            type: 'radar',
+            data: JSON.parse('{{gdp|escapejs}}'),
+            options: options
+        });
+        </script>
     </body>
 </html>

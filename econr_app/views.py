@@ -1,3 +1,4 @@
+from numpy.lib.arraysetops import unique
 import pandas as pd
 import numpy as np
 import json
@@ -64,3 +65,29 @@ def predictions_view(request):
 
 def about_view(request):
     return render(request, 'econr_app/about.html')
+
+def average_view(request):
+    df = get_data()
+    if request.method == "POST":
+        area = request.POST['area']
+        df = df[df.Year==2019].sort_values(by=['Item'])
+        items = df.Item.unique()
+
+        areadata = df[df.Area == request.POST['area']]
+        items = areadata.Item.unique()
+        areadata = areadata.Value.to_numpy()
+
+        avrgdata = df[df.Item.isin(items)].groupby("Item").mean().Value.to_numpy()
+        print(areadata)
+        areadata = areadata / avrgdata
+        print(avrgdata)
+        print(areadata)
+        gdp_data = {'labels':items.tolist(), 'datasets': [{'label':area,'data':areadata.tolist()}]}
+        gdp = json.dumps(gdp_data)
+    else:
+        gdp = None
+        area = None
+
+    countries = get_countries()
+    data={'countries':countries, 'gdp':gdp, 'area':area}
+    return render(request, 'econr_app/average.html', data)
