@@ -6,7 +6,7 @@ from django.shortcuts import render
 from django.contrib.staticfiles.storage import staticfiles_storage
 
 def get_countries():
-    return np.sort(pd.read_csv(staticfiles_storage.path('countries.csv')).iloc[:,0].to_numpy())
+    return np.sort(pd.read_csv(staticfiles_storage.path('countries.csv')).loc[:,'Country or Area'].to_numpy())
 
 def get_data():
     df = pd.read_csv(staticfiles_storage.path('stat.csv')).rename(columns={'Country or Area':'Area'})
@@ -14,14 +14,17 @@ def get_data():
     return df
 
 def to_maptable(df, indicator):
-    datatable = "[['Country', '" + indicator + "']"
+    datatable = "[['Country', 'Name', '" + indicator + "']"
+    print(df[df.Area=='United States'])
     for i,r in df.dropna().iterrows():
-        datatable+=",['" + r['Code2'] + "'," + str(r['Value']) + "]"
+        datatable+=",[\"" + r['Code2'] + "\",\"" + r['Area'] + "\"," + str(r['Value']) + "]"
     datatable+=']'
     return datatable
 
 def index_view(request):
-    return render(request, 'econr_app/index.html') 
+    df = get_data()
+    data={'datapoints':df.shape[0], 'countries_nr':len(df.Area.unique())}
+    return render(request, 'econr_app/index.html', data) 
 
 def countries_view(request):
     df = get_data()
@@ -37,9 +40,8 @@ def countries_view(request):
         gdp = None
         area = None
 
-    datapoints = df.shape[0]
     countries = get_countries()
-    data={'datapoints':datapoints, 'countries_nr':len(df.Area.unique()), 'countries':countries, 'datatable':datatable, 'gdp':gdp, 'area':area}
+    data={'countries':countries, 'datatable':datatable, 'gdp':gdp, 'area':area}
     return render(request, 'econr_app/countries.html', data) 
 
 def world_view(request):
@@ -47,7 +49,7 @@ def world_view(request):
     if request.method == "POST":
         indicator = request.POST['indicator']
         year = request.POST['year']
-        indicator_data = df[(df.Item == indicator) & (df.Year == int(year)) & (df.Area.isin(get_countries()))]
+        indicator_data = df[(df.Item == indicator) & (df.Year == int(year))]
         datatable = to_maptable(indicator_data, indicator)
     else:
         indicator = None

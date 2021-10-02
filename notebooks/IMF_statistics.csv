@@ -1,4 +1,4 @@
-Country or Area,Value,Year,Item,Code
+Country or Area,Value,Year,Item,Code3
 Afghanistan,7.9976602,2017,Central Government Debt (Percent of GDP),AFG
 Albania,70.118725,2017,Central Government Debt (Percent of GDP),ALB
 Algeria,27.259228,2017,Central Government Debt (Percent of GDP),DZA
@@ -35,7 +35,6 @@ Comoros,18.445088,2017,Central Government Debt (Percent of GDP),COM
 Costa Rica,48.40898,2017,Central Government Debt (Percent of GDP),CRI
 Croatia,76.465517,2017,Central Government Debt (Percent of GDP),HRV
 Cyprus,132.92165,2017,Central Government Debt (Percent of GDP),CYP
-Côte d'Ivoire,36.854435,2017,Central Government Debt (Percent of GDP),CIV
 Denmark,29.528643,2017,Central Government Debt (Percent of GDP),DNK
 Djibouti,48.184007,2017,Central Government Debt (Percent of GDP),DJI
 Dominica,84.601798,2017,Central Government Debt (Percent of GDP),DMA
@@ -186,7 +185,6 @@ Comoros,21.052626,2018,Central Government Debt (Percent of GDP),COM
 Costa Rica,53.174123,2018,Central Government Debt (Percent of GDP),CRI
 Croatia,73.184738,2018,Central Government Debt (Percent of GDP),HRV
 Cyprus,140.08175,2018,Central Government Debt (Percent of GDP),CYP
-Côte d'Ivoire,39.66238,2018,Central Government Debt (Percent of GDP),CIV
 Denmark,27.536227,2018,Central Government Debt (Percent of GDP),DNK
 Djibouti,46.508287,2018,Central Government Debt (Percent of GDP),DJI
 Dominica,82.813009,2018,Central Government Debt (Percent of GDP),DMA
@@ -337,7 +335,6 @@ Comoros,25.23714,2019,Central Government Debt (Percent of GDP),COM
 Costa Rica,58.456246,2019,Central Government Debt (Percent of GDP),CRI
 Croatia,71.636308,2019,Central Government Debt (Percent of GDP),HRV
 Cyprus,135.33907,2019,Central Government Debt (Percent of GDP),CYP
-Côte d'Ivoire,37.887592,2019,Central Government Debt (Percent of GDP),CIV
 Denmark,26.452199,2019,Central Government Debt (Percent of GDP),DNK
 Djibouti,38.474482,2019,Central Government Debt (Percent of GDP),DJI
 Dominica,82.639268,2019,Central Government Debt (Percent of GDP),DMA
@@ -490,7 +487,6 @@ Comoros,4.2,2017,Real GDP growth (Annual percent change),COM
 Costa Rica,4.2,2017,Real GDP growth (Annual percent change),CRI
 Croatia,3.4,2017,Real GDP growth (Annual percent change),HRV
 Cyprus,5.2,2017,Real GDP growth (Annual percent change),CYP
-Côte d'Ivoire,7.4,2017,Real GDP growth (Annual percent change),CIV
 Denmark,2.8,2017,Real GDP growth (Annual percent change),DNK
 Djibouti,5.1,2017,Real GDP growth (Annual percent change),DJI
 Dominica,-9.5,2017,Real GDP growth (Annual percent change),DMA
@@ -657,7 +653,6 @@ Comoros,3.6,2018,Real GDP growth (Annual percent change),COM
 Costa Rica,2.1,2018,Real GDP growth (Annual percent change),CRI
 Croatia,2.8,2018,Real GDP growth (Annual percent change),HRV
 Cyprus,5.2,2018,Real GDP growth (Annual percent change),CYP
-Côte d'Ivoire,6.9,2018,Real GDP growth (Annual percent change),CIV
 Denmark,2.2,2018,Real GDP growth (Annual percent change),DNK
 Djibouti,8.5,2018,Real GDP growth (Annual percent change),DJI
 Dominica,0.5,2018,Real GDP growth (Annual percent change),DMA
@@ -824,7 +819,6 @@ Comoros,1.9,2019,Real GDP growth (Annual percent change),COM
 Costa Rica,2.2,2019,Real GDP growth (Annual percent change),CRI
 Croatia,2.9,2019,Real GDP growth (Annual percent change),HRV
 Cyprus,3.1,2019,Real GDP growth (Annual percent change),CYP
-Côte d'Ivoire,6.2,2019,Real GDP growth (Annual percent change),CIV
 Denmark,2.9,2019,Real GDP growth (Annual percent change),DNK
 Djibouti,7.5,2019,Real GDP growth (Annual percent change),DJI
 Dominica,7.6,2019,Real GDP growth (Annual percent change),DMA
@@ -991,7 +985,6 @@ Comoros,-0.5,2020,Real GDP growth (Annual percent change),COM
 Costa Rica,-4.8,2020,Real GDP growth (Annual percent change),CRI
 Croatia,-9,2020,Real GDP growth (Annual percent change),HRV
 Cyprus,-5.1,2020,Real GDP growth (Annual percent change),CYP
-Côte d'Ivoire,2.3,2020,Real GDP growth (Annual percent change),CIV
 Denmark,-3.3,2020,Real GDP growth (Annual percent change),DNK
 Djibouti,-1,2020,Real GDP growth (Annual percent change),DJI
 Dominica,-10.4,2020,Real GDP growth (Annual percent change),DMA
@@ -1158,7 +1151,6 @@ Comoros,0,2021,Real GDP growth (Annual percent change),COM
 Costa Rica,2.6,2021,Real GDP growth (Annual percent change),CRI
 Croatia,4.7,2021,Real GDP growth (Annual percent change),HRV
 Cyprus,3,2021,Real GDP growth (Annual percent change),CYP
-Côte d'Ivoire,6,2021,Real GDP growth (Annual percent change),CIV
 Denmark,2.8,2021,Real GDP growth (Annual percent change),DNK
 Djibouti,5,2021,Real GDP growth (Annual percent change),DJI
 Dominica,-0.4,2021,Real GDP growth (Annual percent change),DMA
@@ -1325,7 +1317,6 @@ Comoros,3.6,2022,Real GDP growth (Annual percent change),COM
 Costa Rica,3.3,2022,Real GDP growth (Annual percent change),CRI
 Croatia,5,2022,Real GDP growth (Annual percent change),HRV
 Cyprus,3.9,2022,Real GDP growth (Annual percent change),CYP
-Côte d'Ivoire,6.5,2022,Real GDP growth (Annual percent change),CIV
 Denmark,2.9,2022,Real GDP growth (Annual percent change),DNK
 Djibouti,5.5,2022,Real GDP growth (Annual percent change),DJI
 Dominica,5.8,2022,Real GDP growth (Annual percent change),DMA
@@ -1492,7 +1483,6 @@ Comoros,3.7,2023,Real GDP growth (Annual percent change),COM
 Costa Rica,3.1,2023,Real GDP growth (Annual percent change),CRI
 Croatia,4.2,2023,Real GDP growth (Annual percent change),HRV
 Cyprus,3.1,2023,Real GDP growth (Annual percent change),CYP
-Côte d'Ivoire,6.4,2023,Real GDP growth (Annual percent change),CIV
 Denmark,1.8,2023,Real GDP growth (Annual percent change),DNK
 Djibouti,6,2023,Real GDP growth (Annual percent change),DJI
 Dominica,3.9,2023,Real GDP growth (Annual percent change),DMA
@@ -1659,7 +1649,6 @@ Comoros,3.8,2024,Real GDP growth (Annual percent change),COM
 Costa Rica,3.1,2024,Real GDP growth (Annual percent change),CRI
 Croatia,3.5,2024,Real GDP growth (Annual percent change),HRV
 Cyprus,2.8,2024,Real GDP growth (Annual percent change),CYP
-Côte d'Ivoire,6.3,2024,Real GDP growth (Annual percent change),CIV
 Denmark,1.8,2024,Real GDP growth (Annual percent change),DNK
 Djibouti,6,2024,Real GDP growth (Annual percent change),DJI
 Dominica,2.9,2024,Real GDP growth (Annual percent change),DMA
@@ -1826,7 +1815,6 @@ Comoros,3.8,2025,Real GDP growth (Annual percent change),COM
 Costa Rica,3.2,2025,Real GDP growth (Annual percent change),CRI
 Croatia,3.7,2025,Real GDP growth (Annual percent change),HRV
 Cyprus,2.6,2025,Real GDP growth (Annual percent change),CYP
-Côte d'Ivoire,6.1,2025,Real GDP growth (Annual percent change),CIV
 Denmark,1.8,2025,Real GDP growth (Annual percent change),DNK
 Djibouti,6,2025,Real GDP growth (Annual percent change),DJI
 Dominica,2.4,2025,Real GDP growth (Annual percent change),DMA
@@ -1993,7 +1981,6 @@ Comoros,3.8,2026,Real GDP growth (Annual percent change),COM
 Costa Rica,3.3,2026,Real GDP growth (Annual percent change),CRI
 Croatia,3,2026,Real GDP growth (Annual percent change),HRV
 Cyprus,2.5,2026,Real GDP growth (Annual percent change),CYP
-Côte d'Ivoire,6,2026,Real GDP growth (Annual percent change),CIV
 Denmark,1.8,2026,Real GDP growth (Annual percent change),DNK
 Djibouti,6,2026,Real GDP growth (Annual percent change),DJI
 Dominica,1.5,2026,Real GDP growth (Annual percent change),DMA

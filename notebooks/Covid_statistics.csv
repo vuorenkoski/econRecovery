@@ -1,4 +1,4 @@
-Value,Country or Area,Code,Item,Year
+Value,Country or Area,Code3,Item,Year
 1.94,Afghanistan,AFG,people_vaccinated_per_hundred,2021
 6.77,Africa,OWID_AFR,people_vaccinated_per_hundred,2021
 32.86,Albania,ALB,people_vaccinated_per_hundred,2021
@@ -26,9 +26,9 @@ Value,Country or Area,Code,Item,Year
 74.96,Bhutan,BTN,people_vaccinated_per_hundred,2021
 35.94,Bolivia,BOL,people_vaccinated_per_hundred,2021
 72.26,Bonaire Sint Eustatius and Saba,BES,people_vaccinated_per_hundred,2021
-19.43,Bosnia and Herzegovina,BIH,people_vaccinated_per_hundred,2021
+22.5,Bosnia and Herzegovina,BIH,people_vaccinated_per_hundred,2021
 16.47,Botswana,BWA,people_vaccinated_per_hundred,2021
-70.22,Brazil,BRA,people_vaccinated_per_hundred,2021
+70.63,Brazil,BRA,people_vaccinated_per_hundred,2021
 57.32,British Virgin Islands,VGB,people_vaccinated_per_hundred,2021
 64.77,Brunei,BRN,people_vaccinated_per_hundred,2021
 15.79,Bulgaria,BGR,people_vaccinated_per_hundred,2021
@@ -46,7 +46,7 @@ Value,Country or Area,Code,Item,Year
 19.67,Comoros,COM,people_vaccinated_per_hundred,2021
 4.08,Congo,COG,people_vaccinated_per_hundred,2021
 64.97,Cook Islands,COK,people_vaccinated_per_hundred,2021
-63.72,Costa Rica,CRI,people_vaccinated_per_hundred,2021
+66.3,Costa Rica,CRI,people_vaccinated_per_hundred,2021
 4.41,Cote d'Ivoire,CIV,people_vaccinated_per_hundred,2021
 44.53,Croatia,HRV,people_vaccinated_per_hundred,2021
 81.85,Cuba,CUB,people_vaccinated_per_hundred,2021
@@ -61,11 +61,11 @@ Value,Country or Area,Code,Item,Year
 63.19,Ecuador,ECU,people_vaccinated_per_hundred,2021
 10.09,Egypt,EGY,people_vaccinated_per_hundred,2021
 63.01,El Salvador,SLV,people_vaccinated_per_hundred,2021
-15.12,Equatorial Guinea,GNQ,people_vaccinated_per_hundred,2021
+15.52,Equatorial Guinea,GNQ,people_vaccinated_per_hundred,2021
 57.27,Estonia,EST,people_vaccinated_per_hundred,2021
 17.82,Eswatini,SWZ,people_vaccinated_per_hundred,2021
 2.4,Ethiopia,ETH,people_vaccinated_per_hundred,2021
-56.67,Europe,OWID_EUR,people_vaccinated_per_hundred,2021
+56.68,Europe,OWID_EUR,people_vaccinated_per_hundred,2021
 67.2,European Union,OWID_EUN,people_vaccinated_per_hundred,2021
 77.69,Faeroe Islands,FRO,people_vaccinated_per_hundred,2021
 74.6,Falkland Islands,FLK,people_vaccinated_per_hundred,2021
@@ -147,7 +147,7 @@ Value,Country or Area,Code,Item,Year
 1.62,Niger,NER,people_vaccinated_per_hundred,2021
 2.27,Nigeria,NGA,people_vaccinated_per_hundred,2021
 74.47,Niue,NIU,people_vaccinated_per_hundred,2021
-57.58,North America,OWID_NAM,people_vaccinated_per_hundred,2021
+57.6,North America,OWID_NAM,people_vaccinated_per_hundred,2021
 37.73,North Macedonia,MKD,people_vaccinated_per_hundred,2021
 41.95,Northern Cyprus,OWID_CYN,people_vaccinated_per_hundred,2021
 76.0,Norway,NOR,people_vaccinated_per_hundred,2021
@@ -179,14 +179,14 @@ Value,Country or Area,Code,Item,Year
 44.63,Serbia,SRB,people_vaccinated_per_hundred,2021
 78.16,Seychelles,SYC,people_vaccinated_per_hundred,2021
 2.33,Sierra Leone,SLE,people_vaccinated_per_hundred,2021
-79.58,Singapore,SGP,people_vaccinated_per_hundred,2021
+79.6,Singapore,SGP,people_vaccinated_per_hundred,2021
 59.24,Sint Maarten (Dutch part),SXM,people_vaccinated_per_hundred,2021
 44.83,Slovakia,SVK,people_vaccinated_per_hundred,2021
 54.21,Slovenia,SVN,people_vaccinated_per_hundred,2021
 10.59,Solomon Islands,SLB,people_vaccinated_per_hundred,2021
 1.54,Somalia,SOM,people_vaccinated_per_hundred,2021
 20.97,South Africa,ZAF,people_vaccinated_per_hundred,2021
-61.77,South America,OWID_SAM,people_vaccinated_per_hundred,2021
+61.97,South America,OWID_SAM,people_vaccinated_per_hundred,2021
 76.69,South Korea,KOR,people_vaccinated_per_hundred,2021
 0.65,South Sudan,SSD,people_vaccinated_per_hundred,2021
 80.61,Spain,ESP,people_vaccinated_per_hundred,2021
@@ -221,7 +221,7 @@ Value,Country or Area,Code,Item,Year
 33.9,Venezuela,VEN,people_vaccinated_per_hundred,2021
 32.77,Vietnam,VNM,people_vaccinated_per_hundred,2021
 48.37,Wallis and Futuna,WLF,people_vaccinated_per_hundred,2021
-45.33,World,OWID_WRL,people_vaccinated_per_hundred,2021
+45.35,World,OWID_WRL,people_vaccinated_per_hundred,2021
 1.01,Yemen,YEM,people_vaccinated_per_hundred,2021
 1.64,Zambia,ZMB,people_vaccinated_per_hundred,2021
 20.43,Zimbabwe,ZWE,people_vaccinated_per_hundred,2021
