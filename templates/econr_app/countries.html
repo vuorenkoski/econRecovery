@@ -44,13 +44,20 @@
                         {% csrf_token %} 
                         <select id="area" name="area">
                         {% for c in countries %}
-                            <option value="{{ c }}">{{ c }}</option>
+                            {% if c == area %}
+                                <option value="{{ c }}" selected="selected">{{ c }}</option>
+                            {% else %}
+                                <option value="{{ c }}">{{ c }}</option>
+                            {% endif %}
                         {% endfor %}
-                        </select>
+                        </select><br>
                         <input type="submit" value="Choose">
                     </form>
                 </div>
-                <div class="col-sm-8 text-left"> 
+                <div class="col-sm-1 text-left"> 
+                </div>
+                <div class="col-sm-6 text-left"> 
+
                     <div class="row">
                         {% if area is not None %}
                             <h1>Area data for {{area}}</h1>

@@ -36,7 +36,7 @@
             </div>
         </nav>
     
-        <div class="container-fluid">    
+        <div class="container-fluid">
             <div class="row content">
                 <div class="col-sm-3 sidenav">
                     <h3>Choose indicator and year</h3>
@@ -44,18 +44,30 @@
                         {% csrf_token %} 
                         <select id="indicator" name="indicator">
                         {% for i in indicators %}
-                            <option value="{{ i }}">{{ i }}</option>
+                            {% if i == indicator %}
+                                <option value="{{ i }}" selected="selected">{{ i }}</option>
+                            {% else %}
+                                <option value="{{ i }}">{{ i }}</option>
+                            {% endif %}
                         {% endfor %}
-                        </select>
+                        </select><br>
                         <select id="year" name="year">
                             {% for y in years %}
-                                <option value="{{ y }}">{{ y }}</option>
+                                {% if y == year %}
+                                    <option value="{{ y }}" selected="selected">{{ y }}</option>
+                                {% else %}
+                                    <option value="{{ y }}">{{ y }}</option>
+                                {% endif %}
                             {% endfor %}
-                        </select>
+                        </select><br>
                         <input type="submit" value="Choose">
                     </form>
+
+
                 </div>
-                <div class="col-sm-8 text-left"> 
+                <div class="col-sm-1 text-left"> 
+                </div>
+                <div class="col-sm-6 text-left"> 
                     <div class="row">
                         {% if indicator is not None %}
                             <h1>Area data for {{indicator}} in {{year}}</h1>

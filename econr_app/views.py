@@ -15,7 +15,6 @@ def get_data():
 
 def to_maptable(df, indicator):
     datatable = "[['Country', 'Name', '" + indicator + "']"
-    print(df[df.Area=='United States'])
     for i,r in df.dropna().iterrows():
         datatable+=",[\"" + r['Code2'] + "\",\"" + r['Area'] + "\"," + str(r['Value']) + "]"
     datatable+=']'
@@ -48,8 +47,8 @@ def world_view(request):
     df = get_data()
     if request.method == "POST":
         indicator = request.POST['indicator']
-        year = request.POST['year']
-        indicator_data = df[(df.Item == indicator) & (df.Year == int(year))]
+        year = int(request.POST['year'])
+        indicator_data = df[(df.Item == indicator) & (df.Year == year)]
         datatable = to_maptable(indicator_data, indicator)
     else:
         indicator = None
