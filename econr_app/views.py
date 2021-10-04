@@ -33,7 +33,7 @@ def countries_view(request):
         areadata = df[df.Area == request.POST['area']]
         datatable = json.loads(areadata.to_json(orient ='records'))
         areadata=areadata[areadata.Item=='Real GDP growth (Annual percent change)']
-        gdp_data = {'labels':areadata.Year.to_numpy().tolist(), 'datasets': [{'label':'Real GDP growth (Annual percent change)','data':areadata.Value.to_numpy().tolist()}]}
+        gdp_data = {'labels':areadata.Year.to_numpy().tolist(), 'datasets': [{'label':'Real GDP growth (Annual percent change)','backgroundColor':'rgba(0, 0, 128, 0.5)','data':areadata.Value.to_numpy().tolist()}]}
         gdp = json.dumps(gdp_data)
     else:
         datatable = None
@@ -78,11 +78,9 @@ def average_view(request):
         areadata = areadata.Value.to_numpy()
 
         avrgdata = df[df.Item.isin(items)].groupby("Item").mean().Value.to_numpy()
-        print(areadata)
         areadata = areadata / avrgdata
-        print(avrgdata)
-        print(areadata)
-        gdp_data = {'labels':items.tolist(), 'datasets': [{'label':area,'data':areadata.tolist()}]}
+        avrgdata =avrgdata / avrgdata
+        gdp_data = {'labels':items.tolist(), 'datasets': [{'label':area,'borderColor':'blue','data':areadata.tolist()}, {'label':'Average','borderColor':'red','data':avrgdata.tolist()}]}
         gdp = json.dumps(gdp_data)
     else:
         gdp = None

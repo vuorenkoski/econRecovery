@@ -3,11 +3,19 @@
     border-radius: 0;
 }
 
-.row.content {height: 450px}
+.row.content {
+    height: auto
+}
+
+.data-content {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 50px;
+}
 
 .sidenav {
-    padding-top: 20px;
-    padding-bottom: 40px; 
+    padding-top: 30px;
+    padding-bottom: 350px; 
     background-color: #f1f1f1;
     height: auto;
 }
@@ -15,7 +23,7 @@
 footer {
     background-color: #555;
     color: white;
-    padding: 15px;
+    padding: 0px;
 }
 
 @media screen and (max-width: 767px) {
