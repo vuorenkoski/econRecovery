@@ -35,8 +35,16 @@
 
                 <div class="col-sm-6">    
                     <div class="data-content">
-                        <p>Mini-project for Introduction to Data Science 2021</p>
+                        <h2>Mini-project for Introduction to Data Science 2021</h2>
                         <p>Seungwon Jang, Mikita Kulbitski, Lauri Vuorenkoski</p>
+                        <h3>Features</h3>
+                        {% for f in features %}
+                            <h4>{{f.name}}</h4>
+                            <p>Source: {{f.source}}</p>
+                            <p>Short description: {{f.short_description}}</p>
+                            <p>Link: <a href="{{f.link}}">{{f.link}}</a></p>
+                            <p>{{f.description}}</p>
+                        {% endfor %}
                     </div>
                 </div>
             </div>

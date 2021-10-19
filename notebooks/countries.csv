@@ -1,4 +1,4 @@
-Region Code,Region Name,Sub-region Code,Sub-region Name,Country or Area,M49 Code,Code2,Code3,Least Developed Countries (LDC),Developed / Developing Countries
+Region Code,Region Name,Sub-region Code,Sub-region Name,Name,M49 Code,Code2,country_code,Least Developed Countries (LDC),Developed / Developing Countries
 2.0,Africa,15.0,Northern Africa,Algeria,12,DZ,DZA,,Developing
 2.0,Africa,15.0,Northern Africa,Egypt,818,EG,EGY,,Developing
 2.0,Africa,15.0,Northern Africa,Libya,434,LY,LBY,,Developing

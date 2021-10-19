@@ -68,8 +68,8 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th>Area</th>
                                             <th>Year</th>
+                                            <th>Month</th>
                                             <th>Item</th>
                                             <th>Value</th>
                                         </tr>
@@ -77,10 +77,10 @@
                                     <tbody>
                                         {% for i in datatable %}
                                             <tr>
-                                                <td>{{i.Area}}</td>
-                                                <td>{{i.Year}}</td>
-                                                <td>{{i.Item}}</td>
-                                                <td>{{i.Value}}</td>
+                                                <td>{{i.year}}</td>
+                                                <td>{{i.month}}</td>
+                                                <td>{{i.name}}</td>
+                                                <td>{{i.value}}</td>
                                             </tr>
                                         {% endfor %}
                                     </tbody>

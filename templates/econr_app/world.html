@@ -39,10 +39,10 @@
                         {% csrf_token %} 
                         <select class="form-select" id="indicator" name="indicator">
                         {% for i in indicators %}
-                            {% if i == indicator %}
-                                <option value="{{ i }}" selected="selected">{{ i }}</option>
+                            {% if i.0 == indicator %}
+                                <option value="{{ i.0 }}" selected="selected">{{ i.1 }}</option>
                             {% else %}
-                                <option value="{{ i }}">{{ i }}</option>
+                                <option value="{{ i.0 }}">{{ i.1 }}</option>
                             {% endif %}
                         {% endfor %}
                         </select><br>
@@ -61,16 +61,19 @@
 
                 <div class="col-sm-6 text-left"> 
                     <div class="data-content">
-                        <div class="row">
-                            {% if indicator is not None %}
-                                <h1>Area data for {{indicator}} in {{year}}</h1>
-                            {% endif %}
-                        </div>
-                        <div class="row">
-                            {% if datatable is not None %}
-                                <div id="regions_div" style="width: 900px; height: 500px;"></div>
-                            {% endif %}
-                        </div>
+                        {% if indicator is not None %}
+                            <div class="row">
+                                <h1>Area data for {{indicator_name}} in {{year}}</h1>
+                                <p>{{indicator_description}}</p>
+                            </div>
+                            <div class="row">
+                                {% if datatable is not None %}
+                                    <div id="regions_div" style="width: 900px; height: 500px;"></div>
+                                {% else %}
+                                    <p>no data</p>
+                                {% endif %}
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>
