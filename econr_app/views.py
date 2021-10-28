@@ -9,19 +9,24 @@ from django.contrib.staticfiles.storage import staticfiles_storage
 def get_countries():
     return np.sort(pd.read_csv(staticfiles_storage.path('countries.csv')).loc[:,'Name'].to_numpy())
 
-def get_features():
-    return pd.read_csv(staticfiles_storage.path('features.csv'))
+def get_features(groups='features'):
+    df = pd.read_csv(staticfiles_storage.path('features.csv'))
+    if groups=='all':
+        return df
+    if groups=='combined':
+        return df[df.feature_id>100] 
+    return df[df.feature_id<100]
 
 def get_feature_name(id):
     if id is None:
         return None
-    df = get_features()
+    df = get_features(groups='all')
     return df[df.feature_id==id].name.iloc[0]
 
 def get_feature_description(id):
     if id is None:
         return None
-    df = get_features()
+    df = get_features(groups='all')
     return df[df.feature_id==id].short_description.iloc[0]
 
 def get_data():
@@ -30,6 +35,12 @@ def get_data():
     df = pd.merge(df, countries, on=['country_code'], how='left')
 
     df.value = pd.to_numeric(df.value, errors='coerce')
+    return df
+
+def get_cluster_data():
+    df = pd.read_csv(staticfiles_storage.path('clusters.csv'))
+    countries = pd.read_csv(staticfiles_storage.path('countries.csv'))[['country_code','Code2','Name']]
+    df = pd.merge(df, countries, on=['country_code'], how='left')
     return df
 
 def to_maptable(df, indicator):
@@ -76,15 +87,28 @@ def world_view(request):
         indicator = None
         datatable = None
         year = None
+
     years = df.year.unique()
     data={'indicators':get_features()[['feature_id','name']].values.tolist(), 'indicator':indicator, 'indicator_name':get_feature_name(indicator), 'indicator_description':get_feature_description(indicator), 'datatable':datatable, 'year':year, 'years':years}
     return render(request, 'econr_app/world.html', data)
 
-def predictions_view(request):
-    return render(request, 'econr_app/predictions.html')
+def clustering_view(request):
+    if request.method == 'POST':
+        df = get_cluster_data()
+        indicator = int(request.POST['indicator'])
+        df['value']=df[str(indicator)]
+        indicator_data=df[['value','Code2','Name']]    
+        datatable = to_maptable(indicator_data, 'Cluster')
+    else:
+        indicator = None
+        datatable = None
+
+    indicators = get_features(groups='all')[['feature_id','name']].values.tolist()
+    data={'indicators':indicators, 'indicator':indicator, 'datatable':datatable, 'indicator_name':get_feature_name(indicator), 'indicator_description':get_feature_description(indicator)}
+    return render(request, 'econr_app/clustering.html', data)
 
 def about_view(request):
-    data ={'features':json.loads(get_features().to_json(orient ='records'))}
+    data ={'features':json.loads(get_features(groups='features').to_json(orient ='records')), 'combinations':json.loads(get_features(groups='combined').to_json(orient ='records'))}
     return render(request, 'econr_app/about.html', data)
 
 def average_view(request):

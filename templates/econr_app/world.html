@@ -24,7 +24,7 @@
                         <li class="nav-item"><a class="nav-link" href="{% url 'countries_view' %}">Country data</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'average_view' %}">Average</a></li>
                         <li class="nav-item"><a class="nav-link active" href="{% url 'world_view' %}">World data</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'predictions_view' %}">Predictions</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'clustering_view' %}">Clustering</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'about_view' %}">About</a></li>
                     </ul>
                 </div>
@@ -34,7 +34,7 @@
         <div class="container-fluid">
             <div class="row content">
                 <div class="col-sm-3 sidenav">
-                    <h3>Choose indicator and year</h3>
+                    <h3>Choose feature and year</h3>
                     <form action="/world" method="POST">
                         {% csrf_token %} 
                         <select class="form-select" id="indicator" name="indicator">

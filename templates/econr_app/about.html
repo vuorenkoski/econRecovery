@@ -21,7 +21,7 @@
                         <li class="nav-item"><a class="nav-link" href="{% url 'countries_view' %}">Country data</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'average_view' %}">Average</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'world_view' %}">World data</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'predictions_view' %}">Predictions</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'clustering_view' %}">Clustering</a></li>
                         <li class="nav-item"><a class="nav-link active" href="{% url 'about_view' %}">About</a></li>
                     </ul>
                 </div>
@@ -36,14 +36,27 @@
                 <div class="col-sm-6">    
                     <div class="data-content">
                         <h2>Mini-project for Introduction to Data Science 2021</h2>
-                        <p>Seungwon Jang, Mikita Kulbitski, Lauri Vuorenkoski</p>
+                        <p>Authors: Seungwon Jang, Mikita Kulbitski, Lauri Vuorenkoski</p>
+                        <hr>
                         <h3>Features</h3>
+                        
                         {% for f in features %}
-                            <h4>{{f.name}}</h4>
-                            <p>Source: {{f.source}}</p>
-                            <p>Short description: {{f.short_description}}</p>
-                            <p>Link: <a href="{{f.link}}">{{f.link}}</a></p>
-                            <p>{{f.description}}</p>
+                            <div class="row bg-light m-3 p-2">
+                                <h5>{{f.name}}</h5>
+                                <p>Source: {{f.source}}</p>
+                                <p>Short description: {{f.short_description}}</p>
+                                <p>Link: <a href="{{f.link}}">{{f.link}}</a></p>
+                                <p>{{f.description}}</p>
+                            </div>
+                        {% endfor %}
+                        <hr>
+                        <h3>Cluster combinations</h3>
+                        {% for f in combinations %}
+                            <div class="row bg-light m-3 p-2">
+                                <h5>{{f.name}}</h5>
+                                <p>Short description: {{f.short_description}}</p>
+                                <p>{{f.description}}</p>
+                            </div>
                         {% endfor %}
                     </div>
                 </div>

@@ -7,6 +7,6 @@ urlpatterns = [
     path('countries', views.countries_view, name='countries_view'),
     path('average', views.average_view, name='average_view'),
     path('world', views.world_view, name='world_view'),
-    path('predictions', views.predictions_view, name='predictions_view'),
+    path('clustering', views.clustering_view, name='clustering_view'),
     path('about', views.about_view, name='about_view'),
 ]

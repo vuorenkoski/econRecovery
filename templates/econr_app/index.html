@@ -21,7 +21,7 @@
                         <li class="nav-item"><a class="nav-link" href="{% url 'countries_view' %}">Country data</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'average_view' %}">Average</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'world_view' %}">World data</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'predictions_view' %}">Predictions</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'clustering_view' %}">Clustering</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'about_view' %}">About</a></li>
                     </ul>
                 </div>
@@ -36,8 +36,8 @@
                 <div class="col-sm-6">    
                     <div class="data-content">
                         <h1>EconRecovery</h1>
-                        <p>Website for predicting the speed of economic recovery from Covid-pandemic. </p>
-                        <p> Database includes {{ datapoints }} datapoints from {{ countries_nr }} different countries/areas</p>
+                        <p>Website for exploring features which can explain the speed of economic recovery from Covid-pandemic. </p>
+                        <p>Database includes {{ datapoints }} datapoints from {{ countries_nr }} different countries/areas</p>
                     </div>
                 </div>
             </div>

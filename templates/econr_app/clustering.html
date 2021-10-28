@@ -19,9 +19,9 @@
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item"><a class="nav-link" href="{% url 'countries_view' %}">Country data</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="{% url 'average_view' %}">Average</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'average_view' %}">Average</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'world_view' %}">World data</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'clustering_view' %}">Clustering</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="{% url 'clustering_view' %}">Clustering</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'about_view' %}">About</a></li>
                     </ul>
                 </div>
@@ -31,15 +31,15 @@
         <div class="container-fluid">    
             <div class="row content">
                 <div class="col-sm-3 sidenav">
-                    <h3>Choose country or area</h3>
-                    <form action="/average" method="POST">
+                    <h3>Choose feature</h3>
+                    <form action="/clustering" method="POST">
                         {% csrf_token %} 
-                        <select class="form-select" id="area" name="area">
-                        {% for c in countries %}
-                            {% if c == area %}
-                                <option value="{{ c }}" selected="selected">{{ c }}</option>
+                        <select class="form-select" id="indicator" name="indicator">
+                        {% for i in indicators %}
+                            {% if i.0 == indicator %}
+                                <option value="{{ i.0 }}" selected="selected">{{ i.1 }}</option>
                             {% else %}
-                                <option value="{{ c }}">{{ c }}</option>
+                                <option value="{{ i.0 }}">{{ i.1 }}</option>
                             {% endif %}
                         {% endfor %}
                         </select><br>
@@ -49,15 +49,19 @@
 
                 <div class="col-sm-6">    
                     <div class="data-content">
-                        <div class="row">
-                            {% if area is not None %}
-                                <h1>Compare {{area}} to world average in 2019</h1>
-                            {% endif %}
-                        </div>
-
-                        <div class="row">
-                            {% if gdp is not None %}
-                                <canvas id="chart"></canvas>
+                        <div class="data-content">
+                            {% if indicator is not None %}
+                                <div class="row">
+                                    <h1>Countries clustered ({{indicator_name}})</h1>
+                                    <p>{{indicator_description}}</p>
+                                </div>
+                                <div class="row">
+                                    {% if datatable is not None %}
+                                        <div id="regions_div" style="width: 900px; height: 500px;"></div>
+                                    {% else %}
+                                        <p>no data</p>
+                                    {% endif %}
+                                </div>
                             {% endif %}
                         </div>
                     </div>
@@ -73,36 +77,29 @@
             </div>
         </div>
 
-        <script>
-            var ctx = document.getElementById('chart').getContext('2d');
-            var options = {
-                layout: {
-                    padding: 10
-                },
-                plugins: {
-                    legend: {
-                        labels: {
-                            font: {
-                                size: 16
-                            }
-                        }
-                    }
-                },
-                scales: {
-                    r: {
-                        pointLabels: {
-                            font: {
-                                size: 16
-                            }
-                        }
-                    }
-                }
-            };
-            var myChart = new Chart(ctx, {
-                type: 'radar',
-                data: JSON.parse('{{gdp|escapejs}}'),
-                options: options
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+            google.charts.load('current', {
+                'packages':['geochart'],
             });
+            google.charts.setOnLoadCallback(drawRegionsMap);
+
+            function drawRegionsMap() {
+                var data = google.visualization.arrayToDataTable({{datatable|safe}});
+
+                var options = {
+                    projection: "kavrayskiy-vii",
+                    colorAxis: {
+                        colors: ['006400','000080','b03060','ff0000','ffd700','00ff00','00bbff','ff00ff','ffe4c4']
+                    },
+                    legend: "none"
+                };
+
+                var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+                chart.draw(data, options);
+            }
         </script>
+
     </body>
 </html>
