@@ -119,7 +119,8 @@ def clustering_view(request):
         df = get_cluster_data()
         indicator = int(request.POST['indicator'])
         df['value']=df[str(indicator)]
-        indicator_data=df[['value','Code2','Name']]    
+        indicator_data=df[['value','Code2','Name']].dropna()  
+        print(indicator_data)
         datatable = to_maptable(indicator_data, 'Cluster')
     else:
         indicator = None
