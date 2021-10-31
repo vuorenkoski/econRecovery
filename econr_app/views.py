@@ -63,17 +63,39 @@ def countries_view(request):
         area = request.POST['area']
         areadata = df[df.Name == request.POST['area']]
         datatable = pd.merge(areadata, get_features()[['feature_id','name']], on=['feature_id'], how='left')
+        datatable = datatable[datatable.feature_id.isin([1,2,3,5])]
         datatable = json.loads(datatable.to_json(orient ='records'))
-        areadata=areadata[areadata.feature_id==4] # 4='Real GDP growth (Annual percent change)'
-        gdp_data = {'labels':areadata.year.to_numpy().tolist(), 'datasets': [{'label':'Real GDP growth (Annual percent change)','backgroundColor':'rgba(0, 0, 128, 0.5)','data':areadata.value.to_numpy().tolist()}]}
+
+        gdp_data=areadata[areadata.feature_id==4] # 4='Real GDP growth (Annual percent change)'
+        gdp_data = {'labels':gdp_data.year.to_numpy().tolist(), 'datasets': [{'label':'Real GDP growth (Annual percent change)','backgroundColor':'rgba(0, 0, 128, 0.5)','data':gdp_data.value.to_numpy().tolist()}]}
         gdp = json.dumps(gdp_data)
+
+        covid_vacc=areadata[areadata.feature_id==6] # 6='Vaccinated / 100 inhabitants (monthly)'
+        covid_vacc['date']=covid_vacc.year.astype(str)+'-'+covid_vacc.month.astype(int).astype(str).apply('{:0>2}'.format)
+        covid_vacc=covid_vacc[['date','value']].rename(columns={'value':'vaccinated'})
+        covid_death=areadata[areadata.feature_id==7] # 7='Total deaths per million (monthly)'
+        covid_death['date']=covid_death.year.astype(str)+'-'+covid_death.month.astype(int).astype(str).apply('{:0>2}'.format)
+        covid_death=covid_death[['date','value']].rename(columns={'value':'deaths'})
+        join=pd.merge(covid_vacc, covid_death, on=['date'], how='outer').sort_values(by=['date'])
+        join['vaccinated']=join['vaccinated'].astype(str)
+        join['deaths']=join['deaths'].astype(str)
+        join=join.replace('nan','null')
+        
+        covid_data = {'labels':join.date.to_numpy().tolist(), 
+                      'datasets': [
+                          {'label':'Vaccinated %','yAxisID':'A','backgroundColor':'rgba(0, 0, 128, 0.5)','data':join.vaccinated.tolist()},
+                          {'label':'Total deaths per million','yAxisID':'B','backgroundColor':'rgba(0, 128, 0, 0.5)','data':join.deaths.tolist()}
+                        ]}
+        covid = json.dumps(covid_data)
+
     else:
         datatable = None
         gdp = None
         area = None
+        covid = None
 
     countries = get_countries()
-    data={'countries':countries, 'datatable':datatable, 'gdp':gdp, 'area':area}
+    data={'countries':countries, 'datatable':datatable, 'gdp':gdp, 'covid':covid, 'area':area}
     return render(request, 'econr_app/countries.html', data) 
 
 def world_view(request):
@@ -116,9 +138,9 @@ def average_view(request):
     if request.method == 'POST':
         area = request.POST['area']
         df = df[df.year==2019].sort_values(by=['feature_id'])
-        items = df.feature_id.unique()
 
         areadata = df[df.Name == request.POST['area']]
+        items = areadata.feature_id.unique()
         areadata = pd.merge(areadata, get_features()[['feature_id','name']], on=['feature_id'], how='left')
         feature_names = areadata.name.unique()
         areadata = areadata.value.to_numpy()

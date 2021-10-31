@@ -58,18 +58,27 @@
 
                         <div class="row">
                             {% if gdp is not None %}
+                                <h2>GDP growth rate</h2>
                                 <canvas id="chart"></canvas>
                                 <hr>
                             {% endif %}
                         </div>
 
                         <div class="row">
+                            {% if covid is not None %}
+                                <h2>Covid deaths and vaccinations</h2>
+                                <canvas id="covid-chart"></canvas>
+                                <hr>
+                            {% endif %}
+                        </div>
+
+                        <div class="row">
                             {% if datatable is not None %}  
+                                <h2>Other datapoints</h2>
                                 <table class="table">
                                     <thead>
                                         <tr>
                                             <th>Year</th>
-                                            <th>Month</th>
                                             <th>Item</th>
                                             <th>Value</th>
                                         </tr>
@@ -78,7 +87,6 @@
                                         {% for i in datatable %}
                                             <tr>
                                                 <td>{{i.year}}</td>
-                                                <td>{{i.month}}</td>
                                                 <td>{{i.name}}</td>
                                                 <td>{{i.value}}</td>
                                             </tr>
@@ -121,6 +129,49 @@
                 data: JSON.parse('{{gdp|escapejs}}'),
                 options: options
             });
+
+            var ctx2 = document.getElementById('covid-chart').getContext('2d');
+            var options = {
+                layout: {
+                    padding: 10
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            font: {
+                                size: 16
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    A: {
+                        type: 'linear',
+                        position: 'left',
+                        ticks: {
+                            color: 'rgba(0, 0, 128, 0.5)',
+                            callback: function(value, index, values) {
+                                return value + ' %';
+                            }
+                        },
+                        min: 0,
+                        max: 100
+                    },
+                    B: {
+                        type: 'linear',
+                        position: 'right',
+                        ticks: {
+                            color: 'rgba(0, 128, 0, 0.5)',
+                        }
+                    }, 
+                }
+            };
+            var myChart = new Chart(ctx2, {
+                type: 'line',
+                data: JSON.parse('{{covid|escapejs}}'),
+                options: options
+            });
+
         </script>
     </body>
 </html>

@@ -5,3 +5,4 @@ feature_id,name,source,short_description,link,description
 4,GDP growth,International Monetary Fund,"Real GDP growth (Annual percent change)",https://www.imf.org/external/datamapper/NGDP_RPCH@WEO/OEMDC/ADVEC/WEOWORLD,""
 5,Public debt,International Monetary Fund,"Central Government Debt (Percent of GDP, annual)",https://www.imf.org/external/datamapper/CG_DEBT_GDP@GDD/OEMDC/ADVEC/WEOWORLD,""
 6,Corona vaccinations,Our World in Data,"Vaccinated / 100 inhabitants (monthly)",https://github.com/owid/covid-19-data/tree/master/public/data,"Total number of people who received at least one vaccine dose per 100 people in the total population"
+7,Corona deaths,Our World in Data,"Total deaths per million (monthly)",https://github.com/owid/covid-19-data/tree/master/public/data,"New deaths attributed to COVID-19 per 1,000,000 people"
